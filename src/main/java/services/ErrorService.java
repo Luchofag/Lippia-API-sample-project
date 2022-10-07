@@ -13,7 +13,7 @@ import java.util.Map;
 public class ErrorService extends BaseService {
 
     public static Response get(String jsonName) {
-        return get(jsonName, ErrorResponse.class,setParams());
+        return get(jsonName, ErrorResponse.class);
     }
 
     private static Map<String, String> setParams() {
