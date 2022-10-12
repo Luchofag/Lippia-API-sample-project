@@ -11,4 +11,9 @@ public class ProjectValidator {
             Assert.assertNotNull(project.getId(),"El id es null");
         }
     }
+
+    public void validateNombre(String name){
+        ProjectResponse response = (ProjectResponse) APIManager.getLastResponse().getResponse();
+        Assert.assertEquals(response.getName(),name,"El nombre del proyecto no es el esperado");
+    }
 }

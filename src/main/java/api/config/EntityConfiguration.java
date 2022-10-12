@@ -24,6 +24,12 @@ public enum EntityConfiguration {
             return WorkspaceService.class;
         }
     },
+    PROJECTS {
+        @Override
+        public Class<?> getEntityService() {
+            return ProjectsService.class;
+        }
+    },
     PROJECT {
         @Override
         public Class<?> getEntityService() {
