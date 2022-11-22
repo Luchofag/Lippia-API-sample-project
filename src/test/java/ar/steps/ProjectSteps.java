@@ -19,9 +19,15 @@ public class ProjectSteps extends PageSteps {
         ProjectValidator.validate();
     }
 
-    @And("un id_WSpace")
-    public void unId_wSpace(){
-        BaseService.addParams("wSpace","633f5b0b89bf9c24493edfef");
+    @And("un workspace y un userId")
+    public void addIdWspaceAndUserId(){
+        BaseService.addParams("wSpace","63793764211dc7053733b8bd");
+        BaseService.addParams("userId","633f5b0b89bf9c24493edfee");
+    }
+    @And("un workspace y un Time entry Id")
+    public void addIdWspaceAndTimeId(){
+        BaseService.addParams("wSpace","63793764211dc7053733b8bd");
+        BaseService.addParams("Time_Entry_Id","63793cb9f570a5720b63baf6");
     }
 
     @Given("un id project de la respuesta")

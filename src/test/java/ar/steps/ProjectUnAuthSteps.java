@@ -8,8 +8,8 @@ import services.BaseService;
 
 public class ProjectUnAuthSteps extends PageSteps {
 
-    @Given("Mi cuenta en clockify y mi X-Api-Key geneada")
-    public void miCuentaCreadaEnClockifyYMiXApiKeyGeneada() {
+    @Given("Mi cuenta en clockify y mi X-Api-Key generada")
+    public void apiKeyGenerated(){
         BaseService.PARAMS.get().put("api-key","NzE0ZTA0YTYtNmZhNi00ZDM2LTkyZjEtMDAzNWY4N2QzMTFl");
     }
 

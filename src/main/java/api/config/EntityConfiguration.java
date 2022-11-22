@@ -18,6 +18,12 @@ public enum EntityConfiguration {
             return ResponseHeadersService.class;
         }
     },
+    TIME_ENTRIES{
+      @Override
+      public Class<?> getEntityService() {
+          return TimeEntriesService.class;
+      }
+    },
 
     PROJECT {
         @Override
