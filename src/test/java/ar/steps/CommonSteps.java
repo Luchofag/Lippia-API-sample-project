@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class CommonSteps extends PageSteps {
 
-    @Given("se inicializan los parametros")
+    @Given("Se inicializan los parametros")
     public void seInicializanLosParametros() {
         BaseService.PARAMS.set(new HashMap<>());
     }

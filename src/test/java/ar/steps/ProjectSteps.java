@@ -19,12 +19,12 @@ public class ProjectSteps extends PageSteps {
         ProjectValidator.validate();
     }
 
-    @And("un workspace y un userId")
+    @And("un workspaceID y un userId")
     public void addIdWspaceAndUserId(){
         BaseService.addParams("wSpace","63793764211dc7053733b8bd");
         BaseService.addParams("userId","633f5b0b89bf9c24493edfee");
     }
-    @And("un workspace y un Time entry Id")
+    @And("un workspaceID y un Time entry Id")
     public void addIdWspaceAndTimeId(){
         BaseService.addParams("wSpace","63793764211dc7053733b8bd");
         BaseService.addParams("Time_Entry_Id","63793cb9f570a5720b63baf6");
