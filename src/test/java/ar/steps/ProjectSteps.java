@@ -1,6 +1,7 @@
 package ar.steps;
 
 import api.model.Project.ProjectResponse;
+import api.model.TimeEntries.TimeEntriesResponse;
 import ar.validator.ProjectValidator;
 import com.crowdar.api.rest.APIManager;
 import com.crowdar.core.PageSteps;
@@ -8,7 +9,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import services.BaseService;
-import services.ProjectService;
 
 public class ProjectSteps extends PageSteps {
 
@@ -34,5 +34,15 @@ public class ProjectSteps extends PageSteps {
     public void unIdProjectDeLaRespuesta() {
         ProjectResponse[] idProject = (ProjectResponse[])APIManager.getLastResponse().getResponse();
         BaseService.addParams("id_project",idProject[0].getId());
+    }
+    @And("un workspaceID '(.+)'")
+    public void unWorkspaceID(String wspaceid) {
+        BaseService.addParams("wSpace",wspaceid);
+    }
+
+    @And("Guardo el id del time entry generado")
+    public void guardoElIdDelTimeEntryGenerado() {
+        TimeEntriesResponse response = (TimeEntriesResponse) APIManager.getLastResponse().getResponse();
+        BaseService.addParams("Time_Entry_Id",response.getId());
     }
 }

@@ -1,4 +1,4 @@
-Feature: Put
+Feature: Modificacion de una entrada
 
   Background:
     Given Se inicializan los parametros

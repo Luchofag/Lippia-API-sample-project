@@ -1,7 +1,6 @@
 package services;
 
-import api.model.Project.PostTimeEntriesResponse;
-import api.model.Project.TimeEntriesResponse;
+import api.model.TimeEntries.TimeEntriesResponse;
 import com.crowdar.api.rest.Response;
 
 public class TimeEntriesService extends BaseService {
@@ -9,12 +8,12 @@ public class TimeEntriesService extends BaseService {
         return get(jsonName, TimeEntriesResponse[].class,PARAMS.get());
     }
     public static Response post(String jsonName) {
-        return post(jsonName, PostTimeEntriesResponse.class,PARAMS.get());
+        return post(jsonName, TimeEntriesResponse.class,PARAMS.get());
     }
     public static Response put(String jsonName) {
-        return put(jsonName, PostTimeEntriesResponse.class,PARAMS.get());
+        return put(jsonName, TimeEntriesResponse.class,PARAMS.get());
     }
     public static Response delete(String jsonName) {
-        return delete(jsonName, PostTimeEntriesResponse.class,PARAMS.get());
+        return delete(jsonName, TimeEntriesResponse.class,PARAMS.get());
     }
 }
