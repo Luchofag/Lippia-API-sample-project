@@ -19,10 +19,10 @@ public class ProjectSteps extends PageSteps {
         ProjectValidator.validate();
     }
 
-    @And("un workspaceID y un userId")
-    public void addIdWspaceAndUserId(){
-        BaseService.addParams("wSpace","63793764211dc7053733b8bd");
-        BaseService.addParams("userId","633f5b0b89bf9c24493edfee");
+    @And("un workspaceID '(.+)' y un '(.+)'")
+    public void addIdWspaceAndUserId(String wSpaceId, String userId){
+        BaseService.addParams("wSpace",wSpaceId);
+        BaseService.addParams("userId",userId);
     }
     @And("un workspaceID y un Time entry Id")
     public void addIdWspaceAndTimeId(){
@@ -44,5 +44,10 @@ public class ProjectSteps extends PageSteps {
     public void guardoElIdDelTimeEntryGenerado() {
         TimeEntriesResponse response = (TimeEntriesResponse) APIManager.getLastResponse().getResponse();
         BaseService.addParams("Time_Entry_Id",response.getId());
+    }
+
+    @And("Asigno la nueva '(.+)' del time entry")
+    public void asignoLaNuevaDescripcionDelTimeEntry(String description) {
+        BaseService.addParams("Description",description);
     }
 }

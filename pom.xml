@@ -24,6 +24,8 @@
 		<cucumber.reporters>--plugin pretty --plugin api.report.CucumberReporter:</cucumber.reporters>
 		<crowdar.cucumber.option>src/test/resources/features ${cucumber.hooks} ${cucumber.stepsDefinitions} --glue com/crowdar --tags 'not @Ignore' --tags ${cucumber.tags} ${cucumber.reporters}</crowdar.cucumber.option>
         <crowdar.projectType>API</crowdar.projectType>
+        <valid_api_key>NzE0ZTA0YTYtNmZhNi00ZDM2LTkyZjEtMDAzNWY4N2QzMTFl</valid_api_key>
+        <invalid_api_key>NzE0ZTA0YTYtNmZhNi0asd2LTkyZjEtMDAzNWY4N2QzMTFl</invalid_api_key>
 
     </properties>
     <profiles>

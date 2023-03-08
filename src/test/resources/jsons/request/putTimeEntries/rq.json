@@ -7,7 +7,7 @@
   "body": {
     "start": "2018-06-12T13:48:14.000Z",
     "billable": "true",
-    "description": "Cambio de coso",
+    "description": "{{Description}}",
     "projectId": "63793804f570a5720b63a675",
     "taskId": null,
     "end": "2018-06-12T13:50:14.000Z",
